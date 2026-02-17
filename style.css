@@ -48,12 +48,7 @@ body {
     font-size: 8rem;
     font-weight: 900;
     letter-spacing: 0.1em;
-    background: linear-gradient(45deg, var(--pink), var(--red), var(--mustard), var(--green));
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 6s ease infinite;
+    color: var(--pink);
 }
 
 @keyframes gradientShift {
