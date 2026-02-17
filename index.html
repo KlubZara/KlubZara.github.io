@@ -1,7 +1,93 @@
-<section id="events">
-    <div class="event-card">
-        <h3>Kerzen machen</h3>
-        <p>Location: Sachsenhausen</p>
-        <p>Date: 21.02.2025</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page with Logo -->
+    <div id="landing-page" class="landing-page">
+        <div id="logo" class="logo">
+            <h1>SOCIAL<br>CLUB</h1>
+        </div>
     </div>
-</section>
+
+    <!-- Events Section (Hidden Initially) -->
+    <div id="events-section" class="events-section hidden">
+        <div class="logo-small">
+            <h2>SOCIAL CLUB</h2>
+        </div>
+        
+        <div class="events-container">
+            <h2 class="events-title">Upcoming Events</h2>
+            
+            <!-- Event 1: Sachsenhausen -->
+            <div class="event-card">
+                <div class="event-info">
+                    <div class="event-date">21. Februar 2025</div>
+                    <div class="event-location">📍 Sachsenhausen</div>
+                </div>
+                <button class="interest-btn" onclick="openModal('Sachsenhausen - 21.02.2025')">
+                    Interesse bekunden
+                </button>
+            </div>
+
+            <!-- Event 2: Kerzen machen -->
+            <div class="event-card">
+                <div class="event-info">
+                    <div class="event-date">21. Februar 2025</div>
+                    <div class="event-location">📍 Kerzen machen</div>
+                </div>
+                <button class="interest-btn" onclick="openModal('Kerzen machen - 21.02.2025')">
+                    Interesse bekunden
+                </button>
+            </div>
+
+            <!-- Event 3: Placeholder -->
+            <div class="event-card">
+                <div class="event-info">
+                    <div class="event-date">28. Februar 2025</div>
+                    <div class="event-location">📍 Nächstes Event</div>
+                </div>
+                <button class="interest-btn" onclick="openModal('Nächstes Event - 28.02.2025')">
+                    Interesse bekunden
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Email Signup -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-event-title">Interesse bekunden</h3>
+            <form id="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="event" id="event-name">
+                <input type="email" name="email" placeholder="Deine Email-Adresse" required>
+                <button type="submit">Absenden</button>
+            </form>
+            <p id="success-message" class="hidden">Vielen Dank! Wir haben dein Interesse notiert.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer hidden">
+        <div class="footer-content">
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="footer-icon" aria-label="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="mailto:YOUR_EMAIL@example.com" class="footer-icon" aria-label="Email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
