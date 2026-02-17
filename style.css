@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Biro Script Plans';
     background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
     color: var(--light);
     overflow-x: hidden;
